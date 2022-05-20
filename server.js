@@ -15,7 +15,7 @@ var rollbar = new Rollbar({
 
 rollbar.log('Hello world!')
 
-app.use(express.static(path.join(__dirname, '../public')))
+// app.use(express.static(path.join(__dirname, '../public')))
 
 //You can only serve specific files using endpoints
 app.get('/', (req, res) => {
