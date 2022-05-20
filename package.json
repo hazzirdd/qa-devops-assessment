@@ -2,7 +2,7 @@
   "name": "rollbar-test",
   "version": "1.0.0",
   "description": "",
-  "main": "assessment-qa-devops/server.js",
+  "main": "server.js",
   "scripts": {
     "test": "jest",
     "start": "node assessment-qa-devops/server.js"

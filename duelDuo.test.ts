@@ -23,8 +23,13 @@ test('Title shows up when page loads', async () => {
 test('I can draw 5 robot cards', async () => {
     await driver.findElement(By.id('draw')).click()
     await driver.sleep(1000)
+    let cards = await driver.findElement(By.xpath('//div/div[@class="bot-card outline"]'))
+    const displayed = cards.isDisplayed()
+    expect(displayed).toBe(true)
+  
+    await driver.sleep(1000)
 })
 
-test ('I can pick my team', async () => {
-    await driver.findElement(By.xpath('//div/h3[text()="Globotron"]'))
-})
+// test ('I can pick my team', async () => {
+//     await driver.findElement(By.xpath('//div/h3[text()="Globotron"]'))
+// })
