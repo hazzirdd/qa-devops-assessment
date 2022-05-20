@@ -15,20 +15,20 @@ var rollbar = new Rollbar({
 
 rollbar.log('Hello world!')
 
-// app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'public')))
 
 //You can only serve specific files using endpoints
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, './public/index.html'));
-})
+// app.get('/', (req, res) => {
+//     res.sendFile(path.join(__dirname, './public/index.html'));
+// })
 
-app.get('/js', (req, res) => {
-    res.sendFile(path.join(__dirname, './public/index.js'))
-})
+// app.get('/js', (req, res) => {
+//     res.sendFile(path.join(__dirname, './public/index.js'))
+// })
 
-app.get('/styles', (req, res) => {
-    res.sendFile(path.join(__dirname, './public/index.css'))
-})
+// app.get('/styles', (req, res) => {
+//     res.sendFile(path.join(__dirname, './public/index.css'))
+// })
 
 app.get('/api/robots', (req, res) => {
     try {
